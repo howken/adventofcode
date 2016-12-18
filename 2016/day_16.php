@@ -1,7 +1,7 @@
 <?php
-$input = "11100010111110100";
+$input = "--INPUT--";
 
-$disk_size = 35651584;
+$disk_size = 0;
 
 while(strlen($input) < $disk_size) {
     $a = $input;
@@ -15,7 +15,6 @@ while(strlen($input) < $disk_size) {
 }
 
 $checksum = substr($input, 0, $disk_size);
-
 
 while(true) {
     $parts = str_split($checksum, 2);
@@ -32,8 +31,6 @@ while(true) {
         break;
     }
 }
-
-
 
 echo "result: $checksum \n";
 
