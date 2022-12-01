@@ -19,7 +19,6 @@ public class App {
         elves.add(elf, new Elf());
 
         try {
-            //reader = new BufferedReader(new FileReader("C:\\Users\\hlund\\projects\\adventofcode\\2022\\day01\\day1\\input.txt"));
             reader = new BufferedReader(new FileReader("input.txt"));
             String line = reader.readLine();
             
@@ -30,13 +29,13 @@ public class App {
                 } else {
                     elves.get(elf).addCalories(Integer.parseInt(line));
                 }
-                // Read next line
                 line = reader.readLine();
             }
             reader.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
+
         Collections.sort(elves);
         Collections.reverse(elves);
         Integer elfOneCalories = elves.get(0).getTotalCalories();
@@ -47,6 +46,7 @@ public class App {
         for(int i=0;i<3;i++) {
             topThreeTotalCalories = topThreeTotalCalories + elves.get(i).getTotalCalories();
         }
+
         System.out.println("Total calories of top 3: "+Integer.toString(topThreeTotalCalories));
     }
 }
