@@ -5,4 +5,7 @@ Make sure you are in the directory of the day you want to test.
 
 ```
 javac *.java && java -cp . App
+or
+javac PartOne.java && java -cp . PartOne
+javac PartTwo.java && java -cp . PartTwo
 ```
