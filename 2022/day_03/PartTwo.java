@@ -55,7 +55,7 @@ public class PartTwo {
                     }
                     // find char value and addit to total.
                     prioritySum = prioritySum + CharValue(priorityChar);
-                    // remove all elements from list
+                    // remove all elements from list 
                     group.removeAll(group);
                 }
                 
